@@ -3,7 +3,7 @@ services:
 
   wait:
     # just use same image as another container, no extra download
-    image: node:10
+    image: node:12
     command: >
       sh -c "
 
@@ -25,7 +25,7 @@ services:
     - ./docker/wait/wait-for-it:/usr/local/bin/wait-for-it
 
   frontend:
-    image: node:10
+    image: node:12
     restart: unless-stopped
     command: >
       sh -c "
